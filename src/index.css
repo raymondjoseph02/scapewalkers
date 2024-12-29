@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind components;
+@tailwind base;
+@tailwind utilities;
+
+* {
+  font-family: "Albert Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+/* .primary-button {
+  text-transform: capitalize;
+}
+.primary-button span:nth-child(odd) {
+  color: red;
+  position: absolute;
+  text-transform: capitalize;
+}
+.primary-button span:nth-child(even) {
+  color: blue;
+  position: absolute;
+  bottom: -9px;
+  text-transform: capitalize;
+  white-space-collapse: collapse; */
+/* } */
+.load_more_button:hover::after {
+  /* background-color: white; */
+  /* transform: rotate(120deg); */
+  animation: rotateAnimation 1.5s infinite ease-in;
+  background-image: linear-gradient(to left, #ffffff00 50%, white 50%);
+}
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.gallery_container {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 320px);
+  /* gap: 10px; */
+  padding-block: 102px;
+  position: relative;
+  transform: translate(-50%);
+  left: 50%;
+  justify-content: center;
+}
+.caledar {
+  position: relative;
+}
+.caledar::before {
+  content: "";
+  animation: spin 5.2s infinite ease-in-out;
+  position: absolute;
+  width: 140%;
+  height: 153%;
+  background-image: linear-gradient(
+    to top right,
+    #5759e3 40%,
+    #766bee85 30%,
+    #ffffff 10%
+  );
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery_container {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    padding-block: 62px;
+    justify-content: center;
+  }
+}
