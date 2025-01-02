@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
 import { FaEnvelope } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import PrimaryButton from "../global_ui/PrimaryButton";
 interface ContactBlockProps {
   title: string;
   email: string;
@@ -45,7 +46,7 @@ const ContactInfo = () => {
   };
 
   return (
-    <section className="relative pt-[360px]  md:pt-[320px] lg:pt-[180px] xl:pt-[270px] pb-10 md:pb-20 contact-info bg-[#ffffff9b]">
+    <section className="relative pt-[360px]  md:pt-[320px] lg:pt-[180px] xl:pt-[270px] pb-10 md:pb-20 contact-info bg-black">
       <div className="flex flex-col-reverse gap-5 py-20 absolute top-[-150px] xl:w-[60%] left-[50%] w-full transform translate-x-[-50%]">
         <div className="flex justify-center p-2 bg-[#d7d9da74] rounded-full gap-3 w-fit mx-auto ">
           <p
@@ -118,15 +119,17 @@ const ContactInfo = () => {
       <div className="flex w-full flex-col md:flex-col px-5 md:px-0 md:w-[80%] mx-auto justify-between lg:flex-row gap-y-10">
         <div className="flex flex-col gap-6 basis-0 md:basis-1/2">
           <div>
-            <h3 className="pb-3 text-2xl font-bold md:text-5xl">
+            <h3 className="pb-3 text-2xl font-bold md:text-5xl text-white_100">
               visit our Office
             </h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Consectetur in iusto natus eos animi voluptas ex incidunt tempore,
-              voluptate laboriosam ipsam itaque cupiditate quisquam quam
-              eligendi eum reprehenderit voluptatum obcaecati?
+            <p className="text-white_100">
+              We welcome you to experience Scapewalkers firsthand. Whether
+              you're here to discuss a project or explore our innovative
+              designs, our doors are always open. Your vision is our priority.
             </p>
+          </div>
+          <div>
+            <PrimaryButton />
           </div>
         </div>
         <div className="relative xl:w-[30%] w-full">

@@ -3,8 +3,18 @@ import Nav from "./Nav";
 import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
 import { motion } from "motion/react";
-import scape_walkers_logo from "../../assets/images/jpg/tools.jpg";
-import men_at_work from "../../assets/images/jpg/men_at_work.jpeg";
+import first from "../../assets/images/images/five.jpg";
+import second from "../../assets/images/images/seconnd.jpg";
+// import third from "../assets/images/images/third.jpg";
+import four from "../../assets/images/images/four.jpg";
+// import five from "../assets/images/images/five.jpg";
+// import sixth from "../assets/images/images/sixt.jpg";
+import nine from "../../assets/images/images/nine.jpg";
+// import eleven from "../assets/images/images/eleven.jpg";
+// import twelve from "../assets/images/images/twelve.jpg";
+import thirteen from "../../assets/images/images/thirteen.jpg";
+// import fourteen from "../assets/images/images/fourteen.jpg";
+// import fifteen from "../assets/images/images/fifteen.jpg";
 import { Context } from "../../context/ContextProvider";
 import ScrollToTop from "./ScrollToTop";
 interface GuestGuardLayoutProps {
@@ -48,7 +58,7 @@ const GuestGuardLayout: FC<GuestGuardLayoutProps> = ({ children }) => {
           transition={{ duration: 0.62, ease: "easeInOut", delay: 1.4 }}
           className="w-[130px] h-[220px] md:w-[320px] md:h-[420px] bg-blue-200 transform  absolute z-40"
         >
-          <img src={men_at_work} alt="men at work" className="w-full h-full" />
+          <img src={first} alt="men at work" className="w-full h-full" />
         </motion.div>
         <motion.div
           initial={{ opacity: 0, x: 30 }}
@@ -56,11 +66,7 @@ const GuestGuardLayout: FC<GuestGuardLayoutProps> = ({ children }) => {
           transition={{ duration: 0.62, ease: "easeInOut", delay: 1.8 }}
           className=" w-[130px] h-[220px] md:w-[320px] md:h-[420px] bg-black transform  absolute z-50 flex items-center  justify-center"
         >
-          <img
-            src={scape_walkers_logo}
-            alt="working tools"
-            className="w-full h-full"
-          />
+          <img src={four} alt="working tools" className="w-full h-full" />
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -68,11 +74,7 @@ const GuestGuardLayout: FC<GuestGuardLayoutProps> = ({ children }) => {
           transition={{ duration: 0.62, ease: "easeInOut", delay: 1 }}
           className="w-[130px] h-[220px] md:w-[320px] md:h-[420px] bg-red-300 absolute  z-30"
         >
-          <img
-            src={scape_walkers_logo}
-            alt="working tools"
-            className="w-full h-full"
-          />{" "}
+          <img src={second} alt="working tools" className="w-full h-full" />{" "}
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -80,11 +82,7 @@ const GuestGuardLayout: FC<GuestGuardLayoutProps> = ({ children }) => {
           transition={{ duration: 0.3, ease: "easeInOut", delay: 0.9 }}
           className="w-[130px] h-[220px] md:w-[320px] md:h-[420px] bg-green-300  absolute z-20"
         >
-          <img
-            src={scape_walkers_logo}
-            alt="working tools"
-            className="w-full h-full"
-          />{" "}
+          <img src={nine} alt="working tools" className="w-full h-full" />{" "}
         </motion.div>
 
         <motion.div
@@ -93,11 +91,7 @@ const GuestGuardLayout: FC<GuestGuardLayoutProps> = ({ children }) => {
           transition={{ duration: 0.2, ease: "easeInOut" }}
           className="w-[130px] h-[220px]  md:w-[320px] md:h-[420px] bg-blue-300  absolute z-10"
         >
-          <img
-            src={scape_walkers_logo}
-            alt="working tools"
-            className="w-full h-full"
-          />{" "}
+          <img src={thirteen} alt="working tools" className="w-full h-full" />{" "}
         </motion.div>
         <div
           style={{ width: `${loadingtime}%` }}

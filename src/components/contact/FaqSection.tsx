@@ -7,14 +7,10 @@ import { toast } from "react-toastify";
 const FaqSection = () => {
   const [isSending, setIsSending] = useState(false);
   const formRef = useRef<HTMLFormElement | null>(null);
-  let debounceTimer: ReturnType<typeof setTimeout>;
   const handleSubmit = () => {
     setIsSending(true);
     try {
-      setTimeout(() => {
-        sendEmail(formRef);
-        clearTimeout(debounceTimer);
-      }, 2000);
+      sendEmail(formRef);
     } catch {
       toast("An error occur try again");
       setIsSending(false);

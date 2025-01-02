@@ -36,10 +36,9 @@ const OurNumbers = () => {
               </h3>
             </div>
             <p className="lg:w-[55ch] text-md  text-[#656464]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Distinctio ea amet animi enim voluptate a perspiciatis iusto rem
-              quod, expedita minus labore cupiditate, alias quis accusamus
-              minima, tempora quo voluptates?
+              Discover innovative ideas and stylish designs crafted to inspire
+              and elevate your space. Our passion for creativity ensures a
+              unique experience for every client.
             </p>
             <div className="">
               <PrimaryButton />

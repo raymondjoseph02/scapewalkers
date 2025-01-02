@@ -15,10 +15,10 @@ function Award() {
                 </h3>
               </div>
               <p className="md:w-[44ch] leading-[26px]">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit
-                delectus fugit earum est repellat ducimus. Iste eveniet
-                accusantium veniam soluta numquam maxime, eos cum omnis
-                consequatur repellendus. Provident, doloremque ratione.
+                Transform your spaces into breathtaking environments that
+                reflect your personality and style. At Scapewalkers, we blend
+                creativity and functionality to deliver exceptional interior
+                designs.
               </p>
               <p className="pt-4 text-lg font-medium">
                 Arc. Balogun AbdulHaq, CEO
@@ -33,8 +33,10 @@ function Award() {
             />
             <div className="absolute max-w-[370px] w-full py-5 bg-white_100 shadow-lg px-4 flex flex-col gap-3 bottom-0 lg:-left-40 left-0">
               <p className="pl-3 border-l-2 border-[#4775F5]">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                ratione! Numquam quo officiis repellendus temporibus quos!
+                With years of experience in the interior design industry, Arc.
+                Balogun AbdulHaq leads Scapewalkers with a commitment to
+                delivering high-quality and innovative designs that meet client
+                expectations.
               </p>
               <p className="font-medium">Balogun AbdulHaq</p>
             </div>

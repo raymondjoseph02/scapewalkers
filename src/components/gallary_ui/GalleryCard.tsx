@@ -1,32 +1,37 @@
 import React, { FC, useRef } from "react";
 import { motion } from "framer-motion"; // Ensure correct import
-import image from "../../assets/images/png/Gallery of Eames Office Celebrates 80 Years of Design History with Exhibition in Tokyo  - 1.jpeg";
 
 interface GalleryCardProps {
   size: string; // Can be "small", "medium", or "large"
+  imageUrl: string;
+  title: string;
 }
 
-const GalleryCard: FC<GalleryCardProps> = ({ size }) => {
+const GalleryCard: FC<GalleryCardProps> = ({ size, imageUrl, title }) => {
   const cardRef = useRef<HTMLDivElement>(null);
 
   return (
     <motion.div
       initial={{
         opacity: 0,
+        scale: 0,
       }}
-      viewport={{ amount: 0.1 }} // Trigger animation when 50% of the element is visible
-      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }} // Trigger animation when 50% of the element is visible
+      whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.23, ease: "easeInOut" }}
       style={{ ...gallerycard, ...styles[size] }}
       ref={cardRef}
-      className="group"
+      className="relative overflow-hidden group"
     >
       <img
-        src={image}
-        alt="Gallery"
+        src={imageUrl}
+        alt={"thumbNails"}
         className="object-cover h-full w-full group-hover:scale-110 transition-transform duration-[0.32s] ease-in-out"
         loading="lazy"
       />
+      <div className="absolute -top-44 text-lg text-white_100 group-hover:top-0 duration-500 transition-all ease-in-out  bg-[#24232360] w-full p-3">
+        {title}
+      </div>
     </motion.div>
   );
 };

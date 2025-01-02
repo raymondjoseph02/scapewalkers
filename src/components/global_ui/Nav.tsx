@@ -1,5 +1,5 @@
-import React, { useContext, useEffect } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useContext, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import PrimaryButton from "./PrimaryButton";
 import scapewalkerLogoDark from "../../assets/images/png/scape_logo_dark_bg.png";
 import scapewalkerLogoDarkMobile from "../../assets/images/png/scape_logo_dark_bg _mobile.png";
@@ -10,7 +10,6 @@ import { Context } from "../../context/ContextProvider";
 
 const Nav = () => {
   const location = useLocation();
-  const navigate = useNavigate();
   // Lottie options
   const options = {
     animationData: lottieHanburger,
@@ -26,7 +25,7 @@ const Nav = () => {
     throw new Error("Nav must be used within a ContextProvider");
   }
 
-  const { isOpen, setIsOpen, servicesRef, setIsServiceInView } = context;
+  const { isOpen, setIsOpen } = context;
 
   useEffect(() => {
     if (animationItem) {
@@ -52,16 +51,16 @@ const Nav = () => {
     }
   }, [location.pathname]);
 
-  const handleScollToView = () => {
-    if (location.pathname == "/") {
-      console.log(servicesRef.current);
-      servicesRef.current?.scrollIntoView({ behavior: "smooth" });
-    } else {
-      setIsServiceInView(true);
+  // const handleScollToView = () => {
+  //   if (location.pathname == "/") {
+  //     console.log(servicesRef.current);
+  //     servicesRef.current?.scrollIntoView({ behavior: "smooth" });
+  //   } else {
+  //     setIsServiceInView(true);
 
-      navigate("/");
-    }
-  };
+  //     navigate("/");
+  //   }
+  // };
 
   return (
     <motion.header

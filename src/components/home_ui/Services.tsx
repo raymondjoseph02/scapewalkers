@@ -33,13 +33,13 @@ const ServicesCard: FC<ServicesCardProps> = ({
 
 const Services = () => {
   const [services, setServices] = useState(() => {
-    return ourService.slice(1, 4);
+    return ourService.slice(0, 4);
   });
   const handleLoadMore = () => {
     if (services.length < ourService.length) {
       setServices(ourService);
     } else {
-      setServices(() => ourService.slice(1, 4));
+      setServices(() => ourService.slice(0, 3));
     }
   };
 
@@ -54,12 +54,12 @@ const Services = () => {
         >
           our services
         </motion.p>
-        <div className="grid transition-all duration-1000 ease-in-out transform border-collapse  md:grid-cols-2 lg:grid-cols-3 border-light_gray/30">
+        <div className="grid transition-all duration-1000 ease-in-out transform border-collapse md:grid-cols-2 lg:grid-cols-3 border-light_gray/30">
           {services.map((serv, i) => (
             <ServicesCard
               key={i}
               title={serv.title}
-              description={serv.descrption}
+              description={serv.description}
               animatByIndex={i}
             />
           ))}

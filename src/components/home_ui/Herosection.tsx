@@ -1,8 +1,12 @@
 import PrimaryButton from "../global_ui/PrimaryButton";
 import building from "../../assets/images/jpg/hero-banner.jpg";
-import building_2 from "../../assets/images/jpg/3d_presentation.jpg";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
+import { ParticlesComponents } from "../global_ui/Particles";
+import ten from "../../assets/images/images/ten.jpg";
+import seven from "../../assets/images/images/seven.jpg";
+import eight from "../../assets/images/images/eight.jpg";
+
 const HeroSection = () => {
   const [startAnimation, setStartAnimation] = useState(false);
   useEffect(() => {
@@ -11,7 +15,8 @@ const HeroSection = () => {
     }, 500);
   }, []);
   return (
-    <section className="bg-black  h-[60vh] bg-herobg relative 2xl:bg-none bg-cover bg-center bg-no-repeat flex items-center justify-center ">
+    <section className="  h-[60vh] bg-herobg relative 2xl:bg-none bg-cover bg-center bg-no-repeat flex items-center justify-center ">
+      <ParticlesComponents />
       <div className="absolute w-full h-full bg-gradient-to-tl from-[#0000005e] to-[#000000]"></div>
       <div className="relative md:w-[80%] w-full px-5 md:px-0 flex items-center flex-col justify-center gap-5 text-center ">
         <motion.h1
@@ -100,12 +105,12 @@ const HeroSection = () => {
           className="absolute  left-[0%] lg:w-[360px] h-[300px] top-[-40px] hidden 2xl:flex"
         >
           <img
-            src={building}
+            src={ten}
             alt=""
             className=" h-[360px] w-[280px] absolute bottom-[-30px]"
           />
           <img
-            src={building_2}
+            src={seven}
             alt=""
             className="h-[260px] w-[220px] absolute  right-0 bottom-[-80px] "
           />
@@ -132,7 +137,7 @@ const HeroSection = () => {
             className=" h-[360px] w-[280px] absolute bottom-[-30px] right-0"
           />
           <img
-            src={building_2}
+            src={eight}
             alt=""
             className="h-[200px] w-[320px] absolute  left-0 bottom-[-80px] "
           />

@@ -1,4 +1,3 @@
-import PrimaryButton from "../global_ui/PrimaryButton";
 import { motion } from "motion/react";
 function AboutHero() {
   return (

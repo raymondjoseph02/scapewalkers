@@ -4,7 +4,7 @@ import { FaInstagram, FaWhatsapp, FaXTwitter } from "react-icons/fa6";
 import PrimaryButton from "./PrimaryButton";
 const Footer = () => {
   return (
-    <footer className="flex flex-col items-center h-auto pt-20 pb-2">
+    <footer className="flex flex-col items-center h-auto pt-20 pb-2 bg-black">
       <div className="md:w-[80%] mx-auto flex-col flex gap-20 pb-10 px-5 md:px-0">
         <div className="flex justify-between border-b-[0.6px] pb-10 border-gray-300">
           <div className="flex flex-col items-end justify-between w-full gap-3 md:flex-row text-white_100 gap-y-10">
@@ -41,13 +41,19 @@ const Footer = () => {
             </div>
             <div className="flex gap-5">
               <div className="bg-gray-600 h-fit p-3 flex rounded-full group hover:bg-white transition-all duration-[0.95s] ease-in-out">
-                <FaInstagram className="text-white group-hover:scale-[1.1]  transition-all group-hover:text-black duration-[0.95s]  ease-in-out md:w-[25px] md:h-[25px]" />
+                <a href="https://www.instagram.com/scapewalkers.ltd/?igshid=YmMyMTA2M2Y%3D">
+                  <FaInstagram className="text-white group-hover:scale-[1.1]  transition-all group-hover:text-black duration-[0.95s]  ease-in-out md:w-[25px] md:h-[25px]" />
+                </a>
               </div>
               <div className="bg-gray-600 h-fit p-3 flex rounded-full group hover:bg-white transition-all duration-[0.95s] ease-in-out">
-                <FaWhatsapp className="text-white group-hover:scale-[1.1]  transition-all group-hover:text-black duration-[0.95s]  ease-in-out md:w-[25px] md:h-[25px]" />
+                <a href="https://wa.me/08034501052" target="_blank">
+                  <FaWhatsapp className="text-white group-hover:scale-[1.1]  transition-all group-hover:text-black duration-[0.95s]  ease-in-out md:w-[25px] md:h-[25px]" />
+                </a>
               </div>
               <div className="bg-gray-600 h-fit p-3 flex rounded-full group hover:bg-white transition-all duration-[0.95s] ease-in-out">
-                <FaXTwitter className="text-white group-hover:scale-[1.1]  transition-all group-hover:text-black duration-[0.95s]  ease-in-out md:w-[25px] md:h-[25px]" />
+                <a href="https://x.com/scapewalkersltd?s=21&t=xu5hlh9f7PJGXvY32LSB3Q">
+                  <FaXTwitter className="text-white group-hover:scale-[1.1]  transition-all group-hover:text-black duration-[0.95s]  ease-in-out md:w-[25px] md:h-[25px]" />
+                </a>
               </div>
             </div>
           </div>
