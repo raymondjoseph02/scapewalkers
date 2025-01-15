@@ -18,7 +18,7 @@ const Footer = () => {
               </p>
             </div>
             <div>
-              <PrimaryButton />
+              <PrimaryButton dark={false} />
             </div>
           </div>
         </div>

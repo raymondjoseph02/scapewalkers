@@ -143,7 +143,7 @@ const Nav = () => {
           {/* Buttons */}
           <div className="flex items-center gap-8">
             <div className="hidden sm:flex">
-              <PrimaryButton></PrimaryButton>
+              <PrimaryButton dark={false} />
             </div>
 
             {/* Hamburger Menu */}
@@ -198,7 +198,7 @@ const Nav = () => {
                 </ul>
                 <div className="md:hidden">
                   {" "}
-                  <PrimaryButton />
+                  <PrimaryButton dark={false} />
                 </div>{" "}
               </div>
 

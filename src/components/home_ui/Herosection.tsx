@@ -83,7 +83,7 @@ const HeroSection = () => {
           }
           className="relative z-20 pt-3"
         >
-          <PrimaryButton />
+          <PrimaryButton dark={false} />
         </motion.div>
         <motion.div
           initial={{

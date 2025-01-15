@@ -129,7 +129,7 @@ const ContactInfo = () => {
             </p>
           </div>
           <div>
-            <PrimaryButton />
+            <PrimaryButton dark={false} />
           </div>
         </div>
         <div className="relative xl:w-[30%] w-full">
