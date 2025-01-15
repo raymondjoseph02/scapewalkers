@@ -1,10 +1,4 @@
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  Autoplay,
-} from "swiper/modules";
+import { Navigation, Scrollbar, A11y, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -18,7 +12,7 @@ interface SliderProps {
 const Slider: FC<SliderProps> = ({ nextButton, prevButton }) => {
   return (
     <Swiper
-      modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+      modules={[Navigation, Scrollbar, A11y, Autoplay]}
       spaceBetween={30}
       breakpoints={{
         768: {
@@ -37,7 +31,6 @@ const Slider: FC<SliderProps> = ({ nextButton, prevButton }) => {
       }}
       autoplay={{ pauseOnMouseEnter: true }}
       loop={true}
-      pagination={{ clickable: true }}
       className="w-[80%]"
     >
       {Portfolio.map((p) => (

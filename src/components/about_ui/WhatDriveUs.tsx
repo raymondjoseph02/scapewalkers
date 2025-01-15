@@ -1,42 +1,48 @@
-import { FaUser } from "react-icons/fa6";
-import logo1 from "../../assets/images/images/logo1.jpg";
-import logo2 from "../../assets/images/images/logo2.jpg";
-import logo3 from "../../assets/images/images/logo3.jpeg";
-import logo4 from "../../assets/images/images/logo4.jpg";
-import logo5 from "../../assets/images/images/logo5.jpg";
+import { FaAward, FaLightbulb, FaTimeline, FaUser } from "react-icons/fa6";
+// import logo1 from "../../assets/images/images/logo1.jpg";
+// import logo2 from "../../assets/images/images/logo2.jpg";
+// import logo3 from "../../assets/images/images/logo3.jpeg";
+// import logo4 from "../../assets/images/images/logo4.jpg";
+// import logo5 from "../../assets/images/images/logo5.jpg";
 import { motion } from "motion/react";
 import PrimaryButton from "../global_ui/PrimaryButton";
+import React from "react";
 const whatMakeUsStandOut = [
   {
     title: "Client-Centered Solutions",
     description:
       "Your vision is our priority. We work closely with you to deliver designs that resonate with your unique style and needs.",
+    icon: FaUser,
   },
   {
     title: "Innovative Designs",
     description:
       "Our creative team ensures every project stands out, blending functionality with aesthetic appeal.",
+    icon: FaLightbulb,
   },
   {
     title: "Exceptional Quality",
     description:
       "We use the finest materials and the latest technology to bring your ideas to life with impeccable quality.",
+    icon: FaAward,
   },
   {
     title: "Timely Delivery",
     description:
-      "          We value your time and ensure every project is delivered on schedule without compromising quality.",
+      " We value your time and ensure every project is delivered on schedule without compromising quality.",
+    icon: FaTimeline,
   },
 ];
 interface CardProps {
   title: string;
   description: string;
+  Icon: React.ElementType;
 }
-const Card: React.FC<CardProps> = ({ title, description }) => {
+const Card: React.FC<CardProps> = ({ title, description, Icon }) => {
   return (
     <div className="flex gap-3 px-5 shadow-lg py-7 bg-white_100">
       <div className="p-3 bg-[#F0F4FE] rounded-full w-fit h-fit">
-        <FaUser className="text-[#4775F5]" />
+        <Icon className="text-[#4775F5]" />
       </div>
       <div className="flex flex-col gap-4">
         <p className="text-lg font-semibold">{title}</p>
@@ -60,7 +66,7 @@ const WhatDriveUs = () => {
               we transform ideas into reality.
             </p>
             <div>
-              <PrimaryButton />
+              <PrimaryButton dark={false} />
             </div>
           </div>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -73,12 +79,13 @@ const WhatDriveUs = () => {
                 <Card
                   title={standOut.title}
                   description={standOut.description}
+                  Icon={standOut.icon}
                 />
               </motion.div>
             ))}
           </div>
         </div>
-        <div className="flex lg:justify-between items-center md:w-[80%] lg:px-0 px-5 mx-auto bg-[#f8f8f8] flex-wrap">
+        {/* <div className="flex lg:justify-between items-center md:w-[80%] lg:px-0 px-5 mx-auto bg-[#f8f8f8] flex-wrap">
           <div className="w-[100px] h-[90px]">
             <img src={logo1} alt="" className="h-full" />
           </div>
@@ -95,14 +102,10 @@ const WhatDriveUs = () => {
               className="object-cover h-full rounded-full aspect-video"
             />
           </div>
-          <div className="w-[90px] h-[90px] rounded-full overflow-hidden">
-            <img
-              src={logo5}
-              alt=""
-              className="object-cover h-full rounded-full aspect-video"
-            />
+          <div className=" w-[70px">
+            <img src={logo5} alt="" className="object-cover " />
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

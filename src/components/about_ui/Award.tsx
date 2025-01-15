@@ -20,9 +20,7 @@ function Award() {
                 creativity and functionality to deliver exceptional interior
                 designs.
               </p>
-              <p className="pt-4 text-lg font-medium">
-                Arc. Balogun AbdulHaq, CEO
-              </p>
+              <p className=" text-lg font-medium">Arc. Balogun AbdulHaq, CEO</p>
             </div>
           </div>
           <div className="h-[400px] basis-1/2 relative">
@@ -31,7 +29,7 @@ function Award() {
               alt="thumb nail"
               className="object-cover w-full lg:h-full aspect-square md:aspect-auto"
             />
-            <div className="absolute max-w-[370px] w-full py-5 bg-white_100 shadow-lg px-4 flex flex-col gap-3 bottom-0 lg:-left-40 left-0">
+            <div className="sm:absolute md:max-w-[370px] w-full py-5 bg-white_100 shadow-lg px-4 flex flex-col gap-3 bottom-0 lg:-left-40 left-0">
               <p className="pl-3 border-l-2 border-[#4775F5]">
                 With years of experience in the interior design industry, Arc.
                 Balogun AbdulHaq leads Scapewalkers with a commitment to

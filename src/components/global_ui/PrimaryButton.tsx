@@ -1,6 +1,11 @@
+import { FC } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-const PrimaryButton = () => {
+interface PrimaryButtonProps {
+  dark: boolean;
+}
+
+const PrimaryButton: FC<PrimaryButtonProps> = ({ dark }) => {
   const location = useLocation();
   const navigate = useNavigate();
   const handleOnClick = () => {
@@ -13,9 +18,11 @@ const PrimaryButton = () => {
   return (
     <button
       onClick={handleOnClick}
-      className="primary-button relative min-w-[129px] py-3 px-5 rounded-3xl text-md font-semibold capitalize bg-white text-black"
+      className={`primary-button relative min-w-[129px] md:py-3 md:px-5  py-2 rounded-3xl text-sm md:text-md font-medium md:font-semibold capitalize ${
+        dark ? "bg-black text-white" : "bg-white text-black"
+      }`}
     >
-      contact us{" "}
+      contact us
     </button>
   );
 };

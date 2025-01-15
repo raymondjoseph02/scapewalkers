@@ -1,6 +1,6 @@
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, A11y, Autoplay } from "swiper/modules";
+import { Navigation, A11y, Autoplay } from "swiper/modules";
 import "swiper/css/pagination";
 import "swiper/css";
 import { useRef } from "react";
@@ -16,7 +16,7 @@ const Testimonials = () => {
         </h3>
       </div>
       <Swiper
-        modules={[Navigation, Pagination, A11y, Autoplay]}
+        modules={[Navigation, A11y, Autoplay]}
         navigation={{
           nextEl: ".next-button",
           prevEl: ".swiper-button-back",
@@ -30,7 +30,6 @@ const Testimonials = () => {
           delay: 2000,
           reverseDirection: true,
         }}
-        pagination={{ clickable: true }}
         className=" w-full lg:w-[80%] lg:px-0 px-5"
       >
         {clientsTestimonials.map((t, index) => {

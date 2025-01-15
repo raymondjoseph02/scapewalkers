@@ -16,7 +16,7 @@ import PrimaryButton from "../global_ui/PrimaryButton";
 
 const OurNumbers = () => {
   return (
-    <section className="flex flex-col gap-10 py-20 bg-white_100 ">
+    <section className="flex flex-col gap-10 py-5 md:py-20 bg-white_100 ">
       <div className="md:w-[80%] mx-auto md:px-0 pt-5 w-full lg:px-5 flex lg:items-end lg:relative lg:h-[66vh] flex-col lg:flex-row ">
         <div className="md:basis-0 lg:basis-1/2">
           <img
@@ -25,13 +25,13 @@ const OurNumbers = () => {
             className="lg:h-[60vh] h-[270px]   w-full object-cover"
           />
         </div>
-        <div className="flex flex-col w-full gap-6 py-12 lg:px-10 lg:basis-1/2">
-          <div className="flex flex-col gap-5 py-10 pl-10 shadow-lg lg:absolute pr-14 bg-white_100 xl:top-7 lg:top-3 lg:right-14 w-fit">
+        <div className="flex flex-col w-full gap-6 py-12 lg:px-10 lg:basis-1/2 ">
+          <div className="flex flex-col gap-5 py-10 pl-5 md:pl-10 md:shadow-lg lg:absolute pr-14 bg-white_100 xl:top-7 lg:top-3 lg:right-14 w-fit">
             <div className="flex flex-col gap-2">
               <p className="text-xl font-semibold text-[#4775F5]">
                 welcome to scapewalkers
               </p>
-              <h3 className="text-4xl capitalize font-semibold md:w-[15ch]">
+              <h3 className="text-2xl md:text-4xl capitalize font-semibold md:w-[15ch]">
                 innovative ideas stylish design{" "}
               </h3>
             </div>
@@ -41,18 +41,18 @@ const OurNumbers = () => {
               unique experience for every client.
             </p>
             <div className="">
-              <PrimaryButton />
+              <PrimaryButton dark={true} />
             </div>
           </div>
-          <div className="relative flex justify-between w-full gap-10 px-10">
+          <div className="relative flex justify-between w-full gap-10 px-5 md:px-10">
             <div className="flex flex-col items-center justify-center text-center">
-              <p className="text-3xl font-semibold">16 +</p>
+              <p className="text-xl font-semibold md:text-3xl">16 +</p>
               <p className="text-md font-medium text-[#000000]/60 capitalize">
                 years of experienec
               </p>
             </div>
             <div className="flex flex-col items-center justify-center text-center">
-              <p className="text-3xl font-semibold">1250 +</p>
+              <p className="text-xl font-semibold md:text-3xl">1250 +</p>
               <p className="text-md font-medium text-[#000000]/60 capitalize">
                 projects completed
               </p>
