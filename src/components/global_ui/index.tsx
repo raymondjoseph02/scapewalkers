@@ -95,9 +95,9 @@ const GuestGuardLayout: FC<GuestGuardLayoutProps> = ({ children }) => {
         </motion.div>
         <div
           style={{ width: `${loadingtime}%` }}
-          className={` bg-red-400 h-2 absolute bottom-0`}
+          className={` bg-white h-2 absolute bottom-0`}
         ></div>
-        <div className="absolute flex items-center justify-center w-20 h-20 text-xl italic bg-red-400 rounded-full bottom-4">
+        <div className="absolute flex items-center justify-center w-20 h-20 text-xl italic bg-white rounded-full bottom-4">
           {loadingtime}%
         </div>
       </motion.div>
