@@ -13,10 +13,11 @@ export const ourService = [
   },
   {
     id: 3,
-    title: "3D Visualization and presentation ",
+    title: "Turnkey Project ",
     description:
-      "Scapewalkers brings designs to life with expert 3D visualization and presentation, offering immersive and detailed representations that transform concepts into vivid, tangible experiences",
+      "Scapewalkers specializes in turnkey projects, providing end-to-end solutions from initial design to final implementation, ensuring seamless delivery and completion.",
   },
+ 
   {
     id: 4,
     title: "project management ",
@@ -61,10 +62,11 @@ export const ourService = [
   },
   {
     id: 11,
-    title: "Turnkey Project ",
+    title: "3D Visualization and presentation ",
     description:
-      "Scapewalkers specializes in turnkey projects, providing end-to-end solutions from initial design to final implementation, ensuring seamless delivery and completion.",
+      "Scapewalkers brings designs to life with expert 3D visualization and presentation, offering immersive and detailed representations that transform concepts into vivid, tangible experiences",
   },
+
   {
     id: 12,
     title: "Brief development and Feasibilty studies ",

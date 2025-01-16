@@ -27,7 +27,7 @@ const Testimonials = () => {
         loop={true}
         autoplay={{
           pauseOnMouseEnter: true,
-          delay: 2000,
+          delay: 3000,
           reverseDirection: true,
         }}
         className=" w-full lg:w-[80%] lg:px-0 px-5"
@@ -35,8 +35,8 @@ const Testimonials = () => {
         {clientsTestimonials.map((t, index) => {
           return (
             <SwiperSlide key={index} className="transition-all ease-in-out">
-              <div className="md:relative  flex-col  flex px-5 md:h-[45vh] lg:h-[40vh] w-full">
-                <div className="left-9 md:absolute lg:left-[10%] md:w-[45%] z-10 bg-white_100 md:top-[50%] transform md:translate-y-[-50%] py-10 px-8 flex flex-col gap-6 h-[80%] overflow-y-scroll scrollbar-thin scrollbar-thumb-blue-300 scrollbar-track-red-400 ">
+              <div className="md:relative  flex-col  flex px-5 md:h-[45vh] lg:h-[60vh] w-full">
+                <div className="left-9 md:absolute lg:left-[10%] md:w-[45%] z-10 bg-white_100 md:top-[50%] transform md:translate-y-[-50%] py-10 px-8 flex flex-col gap-6 h-fit overflow-y-scroll scrollbar-thin scrollbar-thumb-blue-300 scrollbar-track-red-400 ">
                   <p className="text-lg text-gray-500">{t.content}</p>
                   <div>
                     <h4 className="font-semibold text-md md:text-xl">

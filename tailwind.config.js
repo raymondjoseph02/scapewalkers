@@ -23,6 +23,10 @@ export default {
         xxl: "1.5rem",
         xxxl: "2rem",
       },
+      fontFamily: {
+        special: ["Clash Display", "Helvetica, Arial, sans-serif"],
+
+      },
       backgroundImage: {
         clients: "url('./src/assets/images/jpg/ Bedroom.jpeg')",
         herobg: "url('./src/assets/images/jpg/3d_presentation.jpg')",

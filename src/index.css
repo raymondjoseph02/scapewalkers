@@ -44,15 +44,16 @@ body {
 }
 
 .gallery_container {
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 320px);
-  /* gap: 10px; */
-  padding-block: 102px;
-  position: relative;
-  transform: translate(-50%);
-  left: 50%;
-  justify-content: center;
+  column-count: 3; /* Adjust the number of columns based on your design requirements */
+  column-gap: 16px; /* Space between columns */
+}
+
+.gallery_item {
+  break-inside: avoid; /* Prevents items from being split across columns */
+  margin-bottom: 16px; /* Space between items */
+  background-color: rgba(255, 255, 255, 0.7); /* Background color with some transparency */
+  border-radius: 8px; /* Rounded corners for each item */
+  overflow: hidden; /* Ensures content does not spill outside the boundary */
 }
 .caledar {
   position: relative;

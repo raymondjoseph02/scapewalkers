@@ -5,8 +5,8 @@ const About = () => {
   const progressRef = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [percent, setPercent] = useState(0);
-  const [projects, setProjects] = useState(2000);
-  const [clients, setClients] = useState(1500);
+  const [projects, setProjects] = useState(700);
+  const [clients, setClients] = useState(350);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -39,13 +39,13 @@ const About = () => {
     if (isVisible == true) {
       interval = setInterval(() => {
         setPercent((prev) => (prev < 100 ? prev + 1 : prev));
-        setProjects((prev) => (prev < 3000 ? prev + 10 : prev));
-        setClients((prev) => (prev < 2500 ? prev + 10 : prev));
+        setProjects((prev) => (prev < 1200 ? prev + 10 : prev));
+        setClients((prev) => (prev < 750 ? prev + 10 : prev));
       }, 20);
     } else if (isVisible == false) {
       setPercent(0);
-      setProjects(2000);
-      setClients(1500);
+      setProjects(700);
+      setClients(350);
     }
 
     return () => {
@@ -56,18 +56,18 @@ const About = () => {
   }, [isVisible, percent]);
 
   return (
-    <section className="bg-light_gray md:pt-20 py-12">
+    <section className="py-12 bg-light_gray md:pt-20">
       <div className="md:w-[80%] w-[90%] mx-auto h-full">
         <div className="flex lg:relative lg:h-[50vh]">
           <div className="hidden lg:flex absolute left-0 w-[55%] z-10 top-[50%] transform translate-y-[-50%]">
             <img
               src={bedroom}
               alt="well-decorated bedroom"
-              className="w-full aspect-video object-cover"
+              className="object-cover w-full aspect-video"
             />
           </div>
           <div className="bg-white_100 md:p-16 py-5 px-6 flex-col flex gap-3 lg:absolute lg:w-[50%] z-20 right-0 lg:top-[50%] transform lg:translate-y-[-50%] shadow-[#00000022] shadow-[1px_3px_40px_5px]">
-            <p className="md:text-3xl capitalize font-medium">about us</p>
+            <p className="font-medium capitalize md:text-3xl">about us</p>
             <p className="text-[#757474ee]">
               We believe in the power of architecture and design to shape the
               way we live, work, and interact with the world around us. With a
@@ -78,32 +78,32 @@ const About = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 justify-between pt-9">
+        <div className="grid justify-between grid-cols-3 pt-9">
           <>
-            <div className="p-5 text-center border-x-2 border-collapse">
-              <p className="md:text-3xl font-bold animate-fade-in">
+            <div className="p-5 text-center border-collapse border-x-2">
+              <p className="font-bold md:text-3xl animate-fade-in">
                 {projects}+
               </p>
-              <p className="text-black/60 text-sm md:text-md capitalize font-semibold">
+              <p className="text-sm font-semibold capitalize text-black/60 md:text-md">
                 successful projects
               </p>
             </div>
             <div className="p-5 text-center border-collapse">
-              <p className="md:text-3xl font-bold animate-fade-in">
+              <p className="font-bold md:text-3xl animate-fade-in">
                 {clients}+
               </p>
-              <p className="text-black/60 text-sm md:text-md capitalize font-semibold">
+              <p className="text-sm font-semibold capitalize text-black/60 md:text-md">
                 happy clients
               </p>
             </div>
             <div
               ref={progressRef}
-              className="p-5 text-center border-x-2 border-collapse"
+              className="p-5 text-center border-collapse border-x-2"
             >
-              <p className="md:text-3xl font-bold animate-fade-in">
+              <p className="font-bold md:text-3xl animate-fade-in">
                 {percent}%
               </p>
-              <p className="text-black/60 text-sm md:text-md capitalize font-semibold">
+              <p className="text-sm font-semibold capitalize text-black/60 md:text-md">
                 client satisfaction
               </p>
             </div>
