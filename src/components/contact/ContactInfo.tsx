@@ -46,8 +46,8 @@ const ContactInfo = () => {
   };
 
   return (
-    <section className="relative pt-[360px]  md:pt-[320px] lg:pt-[180px] xl:pt-[270px] pb-10 md:pb-20 contact-info bg-black">
-      <div className="flex flex-col-reverse gap-5 py-20 absolute top-[-150px] xl:w-[60%] left-[50%] w-full transform translate-x-[-50%]">
+    <section className="flex flex-col gap-20 py-10 bg-black md:pb-20 contact-info">
+      <div className="flex flex-col gap-5  mx-auto xl:w-[60%] w-full ">
         <div className="flex justify-center p-2 bg-[#d7d9da74] rounded-full gap-3 w-fit mx-auto ">
           <p
             onClick={() => setIsAppointment(false)}
@@ -136,7 +136,10 @@ const ContactInfo = () => {
           <p className="absolute top-[-15px]  bg-blue-400  left-[50%] transform translate-x-[-50%] px-8 py-1 rounded-full capitalize font-medium z-30">
             hours
           </p>
-          <div className="flex  caledar md:justify-center  px-[2px] pt-[2px] rounded-lg overflow-hidden ">
+          <div
+            style={{ borderRadius: "0px 0px 90px 0px" }}
+            className="flex  caledar md:justify-center  px-[2px] pt-[2px]  overflow-hidden "
+          >
             <div className="relative z-20 flex flex-col items-center justify-center w-full py-10 border rounded-lg bg-white_100 gap-y-4">
               <div className="flex flex-col items-center gap-2">
                 <p className="font-semibold capitalize text-md md:text-xl">

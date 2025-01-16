@@ -5,13 +5,20 @@ interface GalleryCardProps {
   size: string; // Can be "small", "medium", or "large"
   imageUrl: string;
   title: string;
+  handleOnClick: (event: React.MouseEvent<HTMLElement>) => void; // Correct typing for an event handler
 }
 
-const GalleryCard: FC<GalleryCardProps> = ({ size, imageUrl, title }) => {
+const GalleryCard: FC<GalleryCardProps> = ({
+  size,
+  imageUrl,
+  title,
+  handleOnClick,
+}) => {
   const cardRef = useRef<HTMLDivElement>(null);
 
   return (
     <motion.div
+      onClick={handleOnClick}
       initial={{
         opacity: 0,
         scale: 0,

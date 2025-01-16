@@ -38,9 +38,6 @@ const FaqSection = () => {
     <section className="py-10 md:py-20">
       <div className="flex flex-col xl:w-[80%] w-full mx-auto gap-9  xl:px-0 px-5">
         <div className="flex flex-col gap-3">
-          <p className="text-lg font-semibold leading-3 text-blue-400 md:text-xxl">
-            Faq
-          </p>
           <h3 className="text-2xl font-bold capitalize md:text-5xl">
             frequently asked questions
           </h3>
@@ -62,31 +59,31 @@ const FaqSection = () => {
                 <Form ref={formRef} className={``}>
                   <div className="flex flex-col w-full">
                     <div className="">
-                      <div className="flex flex-col gap-[6px] basis-0 sm:basis-1/2">
+                      <div className="flex flex-col gap-[6px] basis-0 sm:basis-1/2 relative">
                         <Field
                           type="text"
                           id="name"
                           name="from_name"
                           placeholder=" name"
-                          className="outline-none bottom-0 border-b-2 border-b-[#000000]   bg-transparent text-[14px] font-medium focus:border-[#635ef5] leading-[23.8px] tracking-tighter p-[1rem] capitalize"
+                          className="outline-none bottom-0 border-b-2 border-b-[#000000] p-[1rem]  bg-transparent text-[14px] font-medium focus:border-[#6664643b] leading-[23.8px] tracking-tighter placeholder:capitalize"
                         />
                         {errors.from_name && touched.from_name && (
-                          <small className="text-[#E22D57]">
+                          <small className="text-[#E22D57] absolute right-0">
                             {errors.from_name}
                           </small>
                         )}
                       </div>
 
-                      <div className="flex flex-col gap-[6px] basis-0 sm:basis-1/2">
+                      <div className="flex flex-col gap-[6px] basis-0 sm:basis-1/2 relative pt-2">
                         <Field
                           type="email"
                           id="email"
                           name="from_email"
                           placeholder="email"
-                          className="outline-none bottom-0 border-b-2 border-b-[#000000] p-[1rem]  bg-transparent text-[14px] font-medium focus:border-[#635ef5] leading-[23.8px] tracking-tighter capitalize"
+                          className="outline-none bottom-0 border-b-2 border-b-[#000000] p-[1rem]  bg-transparent text-[14px] font-medium focus:border-[#6664643b] leading-[23.8px] tracking-tighter placeholder:capitalize"
                         />
                         {errors.from_email && touched.from_email && (
-                          <small className="text-[#E22D57]">
+                          <small className="text-[#E22D57] absolute right-0">
                             {errors.from_email}
                           </small>
                         )}
@@ -94,16 +91,19 @@ const FaqSection = () => {
                     </div>
 
                     {/* Message field */}
-                    <div className="flex flex-col gap-[6px] w-full">
+                    <div
+                      className="flex flex-col gap-[6px] w-full relative pt-2
+                    "
+                    >
                       <Field
                         as="textarea"
                         id="message"
                         name="message"
                         placeholder="Tell us how we can assist you..."
-                        className="outline-none bottom-0 border-b-2 border-b-[#000000] p-[1rem]  bg-transparent capitalize text-[14px] font-medium focus:border-[#635ef5] leading-[23.8px] tracking-tighter"
+                        className="outline-none bottom-0 border-b-2 border-b-[#000000] p-[1rem]  bg-transparent text-[14px] font-medium focus:border-[#6664643b] leading-[23.8px] tracking-tighter placeholder:capitalize"
                       />
                       {errors.message && (
-                        <small className="text-[#E22D57]">
+                        <small className="text-[#E22D57] absolute right-0">
                           {errors.message}
                         </small>
                       )}

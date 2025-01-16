@@ -21,7 +21,7 @@ const ServicesCard: FC<ServicesCardProps> = ({
         y: 0,
         opacity: 1,
       }}
-      transition={{ delay: 1.9, duration: animatByIndex / 2.3 }}
+      transition={{ delay: 0.2, duration: animatByIndex / 2.3 }}
       className="text-white py-6 px-4 md:py-12 md:px-7 border-[.6px] flex border-collapse flex-col gap-4 border-light_gray/30"
     >
       <img src="" alt="" />

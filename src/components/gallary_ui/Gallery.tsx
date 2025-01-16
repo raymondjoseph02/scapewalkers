@@ -1,12 +1,15 @@
 import GalleryCard from "./GalleryCard";
 import { Portfolio } from "../../data/Portfolio";
 import { ParticlesComponents } from "../global_ui/Particles";
-import { Skeleton } from "@mui/material";
 import { useState, useEffect } from "react";
+import Modal from "./Modal";
+import { Skeleton } from "@mui/material";
 
 const Gallary = () => {
   const [isLoading, setIsLoading] = useState(true);
-
+  const [modalText, setModalText] = useState("");
+  const [modalImage, setModalImage] = useState("");
+  const [openModal, setOpenModal] = useState(false);
   const getRandomSize = () => {
     const sizes = ["small", "normal", "medium", "large"];
     const randomIndex = Math.floor(Math.random() * sizes.length);
@@ -14,7 +17,7 @@ const Gallary = () => {
   };
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 9000); // Simulate loading for 2 seconds
+    const timer = setTimeout(() => setIsLoading(false), 2500); // Simulate loading for 2 seconds
     return () => clearTimeout(timer);
   }, []);
 
@@ -23,7 +26,7 @@ const Gallary = () => {
       <ParticlesComponents />
 
       <div
-        className={`w-full xl:w-[80%] gallery_container bg-[] ${
+        className={`w-full xl:w-[80%] gallery_container  ${
           isLoading ? "gap-3" : "gap-0"
         }`}
       >
@@ -45,13 +48,40 @@ const Gallary = () => {
                 />
               ))
           : Portfolio.map((p) => (
-              <GalleryCard
-                key={p.id} // Ensure each GalleryCard has a unique key
-                size={getRandomSize()}
-                imageUrl={p.projectImage}
-                title={p.projectName}
-              />
+              <div>
+                <GalleryCard
+                  handleOnClick={() => {
+                    setModalText(p.projectName);
+                    setModalImage(p.projectImage);
+                    setOpenModal(true);
+                  }}
+                  key={p.id} // Ensure each GalleryCard has a unique key
+                  size={getRandomSize()}
+                  imageUrl={p.projectImage}
+                  title={p.projectName}
+                />
+              </div>
             ))}
+      </div>
+      <div
+        onClick={() => {
+          setOpenModal(false);
+        }}
+        className={`${
+          openModal
+            ? "fixed w-screen h-screen z-20 bg-[#00000088] top-0 flex justify-center items-center"
+            : " hidden"
+        }`}
+      >
+        <div className={`${openModal ? "flex " : "hidden"} `}>
+          <Modal
+            text={modalText}
+            image={modalImage}
+            handleCloseModal={() => {
+              setOpenModal(false);
+            }}
+          />
+        </div>
       </div>
     </section>
   );
