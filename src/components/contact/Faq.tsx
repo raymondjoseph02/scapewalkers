@@ -9,6 +9,7 @@ import MuiAccordionSummary, {
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 
+// Styled Accordion
 const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
@@ -21,12 +22,13 @@ const Accordion = styled((props: AccordionProps) => (
   },
 }));
 
+// Styled AccordionSummary
 const AccordionSummary = styled((props: AccordionSummaryProps) => (
   <MuiAccordionSummary
     expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
     {...props}
   />
-))(({ theme }) => ({
+))(() => ({
   backgroundColor: "rgba(0,0,0,0.1)",
   border: "1px solid rgba(0,0,0,0.1)",
   borderRadius: "4px",
@@ -38,84 +40,62 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
     {
       transform: "rotate(90deg)",
     },
-  [`& .${accordionSummaryClasses}.${accordionSummaryClasses.expanded}`]: {
-    backgroundColor: "rgba(0, 0, 0,1 )",
-  },
   [`& .${accordionSummaryClasses.content}`]: {
-    color: "rgba(21,0,31,2)",
+    color: "rgba(21,0,31,1)", // Corrected the color value
   },
-  ...theme.applyStyles("dark", {
-    backgroundColor: "rgba(255, 255, 255, .05)",
-  }),
 }));
 
+// Styled AccordionDetails
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
   borderTop: "1px solid rgba(0, 0, 0, .125)",
-  backgroundColor: "rgba(256,256,256,1.4)",
-  color: "rgba(0,0,0,.6)",
+  backgroundColor: "rgba(255,255,255,0.9)", // Fixed invalid RGBA value
+  color: "rgba(0,0,0,0.6)",
   fontSize: "12px",
-  fontWeight: "200",
+  fontWeight: 200,
 }));
 
-export default function CustomizedAccordions() {
+// Main Component
+const CustomizedAccordions: React.FC = () => {
   const [expanded, setExpanded] = React.useState<string | false>("panel1");
 
+  // Change handler with proper typing
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
+      console.log(event);
+
       setExpanded(newExpanded ? panel : false);
     };
 
   return (
     <div>
-      <Accordion
-        expanded={expanded === "panel1"}
-        onChange={handleChange("panel1")}
-      >
-        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography component="span">Collapsible Group Item #1</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-            lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion
-        expanded={expanded === "panel2"}
-        onChange={handleChange("panel2")}
-      >
-        <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <Typography component="span">Collapsible Group Item #2</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-            lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion
-        expanded={expanded === "panel3"}
-        onChange={handleChange("panel3")}
-      >
-        <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography component="span">Collapsible Group Item #3</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-            lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
+      {["panel1", "panel2", "panel3"].map((panel, index) => (
+        <Accordion
+          key={panel}
+          expanded={expanded === panel}
+          onChange={handleChange(panel)}
+        >
+          <AccordionSummary
+            aria-controls={`${panel}d-content`}
+            id={`${panel}d-header`}
+          >
+            <Typography component="span">
+              Collapsible Group Item #{index + 1}
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+      ))}
     </div>
   );
-}
+};
+
+export default CustomizedAccordions;
