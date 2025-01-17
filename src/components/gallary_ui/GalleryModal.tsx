@@ -45,13 +45,13 @@ const GalleryModal: React.FC<GalleryModalProps> = ({
                   <div className="flex items-center justify-between px-6 gap-x-5">
                     <DialogTitle
                       as="h3"
-                      className="text-xl font-bold text-left text-black md:text-2xl font-special"
+                      className="text-xl font-medium md:font-bold text-left text-black md:text-2xl font-special"
                     >
                       {modalText}
                     </DialogTitle>
                     <button
                       onClick={closeModal}
-                      className="border-[0.5px] border-black   p-3 group rounded-full flex  justify-center items-center hover:bg-gray-600"
+                      className="border-[0.5px] border-black p-2  md:p-3 group rounded-full flex  justify-center items-center hover:bg-gray-600"
                     >
                       <FaX className="text-black group-hover:text-white size-3" />
                     </button>

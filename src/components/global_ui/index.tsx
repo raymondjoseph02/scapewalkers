@@ -50,7 +50,7 @@ const GuestGuardLayout: FC<GuestGuardLayoutProps> = ({ children }) => {
         animate={{ opacity: 0, height: "0vh" }}
         style={{ transformOrigin: "top left" }}
         transition={{ duration: 0.9, delay: 4 }}
-        className="h-[100vh] w-screen flex items-center justify-center bg-black relative overflow-hidden px-3"
+        className=" w-screen flex items-center justify-center bg-black relative overflow-hidden px-3"
       >
         <motion.div
           initial={{ opacity: 0, x: 30 }}
@@ -93,12 +93,14 @@ const GuestGuardLayout: FC<GuestGuardLayoutProps> = ({ children }) => {
         >
           <img src={thirteen} alt="working tools" className="w-full h-full" />{" "}
         </motion.div>
-        <div
-          style={{ width: `${loadingtime}%` }}
-          className={` bg-white h-2 absolute bottom-0`}
-        ></div>
-        <div className="absolute flex items-center justify-center w-20 h-20 text-xl italic bg-white rounded-full bottom-4">
-          {loadingtime}%
+        <div className="flex flex-col gap-3 absolute bottom-2 w-full justify-center items-center">
+          <div
+            style={{ width: `${loadingtime}%` }}
+            className={` bg-white h-2 absolute bottom-0`}
+          ></div>
+          <div className="absolute flex items-center justify-center w-20 h-20 text-xl italic bg-white rounded-full bottom-4">
+            {loadingtime}%
+          </div>
         </div>
       </motion.div>
     ); // Replace with a spinner or loading indicator
