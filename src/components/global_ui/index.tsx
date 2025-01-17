@@ -50,7 +50,7 @@ const GuestGuardLayout: FC<GuestGuardLayoutProps> = ({ children }) => {
         animate={{ opacity: 0, height: "0vh" }}
         style={{ transformOrigin: "top left" }}
         transition={{ duration: 0.9, delay: 4 }}
-        className=" w-screen flex items-center justify-center bg-black relative overflow-hidden px-3"
+        className=" w-screen flex items-center justify-center bg-black relative overflow-hidden px-3 h-screen"
       >
         <motion.div
           initial={{ opacity: 0, x: 30 }}
