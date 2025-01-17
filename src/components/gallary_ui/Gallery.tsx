@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import GalleryCard from "./GalleryCard";
 import { Portfolio } from "../../data/Portfolio";
 import { ParticlesComponents } from "../global_ui/Particles";
 import GalleryModal from "./GalleryModal";
-
 
 interface PortfolioItem {
   id: number;
@@ -39,21 +38,23 @@ const Gallary: React.FC = () => {
   return (
     <section className="relative w-full bg-transparent">
       <ParticlesComponents />
-      <div className="container w-full gap-5 mx-auto" style={{ columnCount: 3, columnGap: '20px' }}>
+      <div className="container w-full gap-5 mx-auto md:columns-3 sm:columns-2 columns-1">
         {isLoading
           ? Array.from({ length: Portfolio.length }, (_, index) => (
-            <div
-            key={index}
-            style={{ height: `${getRandomHeight()}px` }}
-            className="mb-4 bg-gray-300 rounded-lg break-inside-avoid animate-pulse"
-          />
+              <div
+                key={index}
+                style={{ height: `${getRandomHeight()}px` }}
+                className="mb-4 bg-gray-300 rounded-lg break-inside-avoid animate-pulse"
+              />
             ))
           : Portfolio.map((item: PortfolioItem) => (
               <div key={item.id} className="break-inside-avoid">
                 <GalleryCard
                   imageUrl={item.projectImage}
                   title={item.projectName}
-                  handleOnClick={() => openModal(item.projectName, item.projectImage)}
+                  handleOnClick={() =>
+                    openModal(item.projectName, item.projectImage)
+                  }
                 />
               </div>
             ))}
