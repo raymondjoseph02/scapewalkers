@@ -31,14 +31,14 @@ const Slider: FC<SliderProps> = ({ nextButton, prevButton }) => {
       }}
       autoplay={{ pauseOnMouseEnter: true }}
       loop={true}
-      className="w-[80%]"
+      className="w-[80%] h-[300px]"
     >
       {Portfolio.map((p) => (
         <SwiperSlide className="w-[20rem] h-[430px] md:h-fit relative overflow-hidden cursor-pointer group transition-all ease-in-out ">
           <img
             src={p.projectImage}
             alt={p.projectName}
-            className="object-cover aspect-video"
+            className="object-cover aspect-auto"
           />
           <p className="lg:text-lg text-sm font-medium capitalize transition-all duration-500 absolute bottom-[-110%] group-hover:bottom-0 py-4 px-2 bg-black/40 text-white_100 w-full">
             {p.projectName}

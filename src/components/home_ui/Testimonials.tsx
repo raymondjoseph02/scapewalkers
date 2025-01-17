@@ -9,7 +9,7 @@ import { Portfolio } from "../../data/Portfolio";
 const Testimonials = () => {
   const nextButtonRef = useRef<HTMLButtonElement | null>(null);
   return (
-    <section className="flex flex-col gap-10 py-10 bg-light_gray">
+    <section className="flex flex-col gap-10 py-5 md:py-10 bg-light_gray h-auto">
       <div className=" md:px-0 mx-auto w-[80%] relative flex flex-col items-center gap-5">
         <h3 className="text-2xl font-normal capitalize md:text-3xl ">
           what our clients say
