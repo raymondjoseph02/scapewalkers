@@ -13,6 +13,12 @@ import twelve from "../assets/images/images/twelve.jpg";
 import thirteen from "../assets/images/images/thirteen.jpg";
 import fourteen from "../assets/images/images/fourteen.jpg";
 import fifteen from "../assets/images/images/fifteen.jpg";
+import site_work from "../assets/images/images/contemporary_building.jpeg";
+import space_ceiling from "../assets/images/images/space_frames_and_click_clad_ceiling.jpeg";
+import bankole_pool from "../assets/images/images/bankole_oki_residence_pool.jpeg";
+import resort_centre from "../assets/images/images/resort_center_1.jpeg";
+import sport_centre from "../assets/images/images/sport_center.jpeg";
+import electrical_conducting from "../assets/images/images/electrical_conduiting .jpeg";
 
 export const Portfolio = [
   {
@@ -104,5 +110,41 @@ export const Portfolio = [
     projectName: "Interior design implementaion",
     projectDescription: "G/Daya Estate, Abuja Nigeria",
     projectImage: fourteen,
+  },
+  {
+    id: 16,
+    projectName: "Electrical Conduting first floor",
+    projectDescription: "Advance building, Kano State",
+    projectImage: electrical_conducting,
+  },
+  {
+    id: 17,
+    projectName: "Ancillary building Sport centre",
+    projectDescription: "Garki , Abuja Nigeria",
+    projectImage: sport_centre,
+  },
+  {
+    id: 18,
+    projectName: "Contemporary building ",
+    projectDescription: "kajola , ogun state",
+    projectImage: site_work,
+  },
+  {
+    id: 19,
+    projectName: "Bankole Oki residence pool ",
+    projectDescription: "ebute meta , Lagos Nigeria",
+    projectImage: bankole_pool,
+  },
+  {
+    id: 20,
+    projectName: "Space frames and click clad ceillings",
+    projectDescription: "Garki , Abuja Nigeria",
+    projectImage: space_ceiling,
+  },
+  {
+    id: 21,
+    projectName: "Resort centre ",
+    projectDescription: " Abuja Nigeria",
+    projectImage: resort_centre,
   },
 ];

@@ -25,17 +25,16 @@ const GalleryCard: FC<GalleryCardProps> = ({
       transition={{ duration: 0.23, ease: "easeInOut" }}
       style={{ ...galleryCard, ...styles[size] }}
       ref={cardRef}
-      className="relative pb-5 overflow-hidden cursor-pointer group"
+      className="relative pb-5 overflow-hidden cursor-pointer group max-h-[450px]"
     >
       <img
         src={imageUrl}
         alt="Thumbnail"
-        className="object-cover h-full w-full group-hover:scale-110 transition-transform duration-[0.32s] ease-in-out"
+        className="object-cover h-full w-full group-hover:scale-110 transition-transform duration-[0.32s] ease-in-out aspect-auto"
       />
-        <div className="absolute backdrop-blur-sm -top-44 font-special font-semibold text-lg text-white_100 group-hover:top-0 duration-500 transition-all ease-in-out  bg-[#24232360] w-full p-3">
+      <div className="absolute backdrop-blur-sm -top-44 font-special font-semibold text-lg text-white_100 group-hover:top-0 duration-500 transition-all ease-in-out  bg-[#24232360] w-full p-3">
         {title}
       </div>
-
     </motion.div>
   );
 };

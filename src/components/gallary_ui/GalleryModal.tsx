@@ -51,7 +51,7 @@ const GalleryModal: React.FC<GalleryModalProps> = ({
                     </DialogTitle>
                     <button
                       onClick={closeModal}
-                      className="border-[0.5px] border-black   p-5 group rounded-full flex  justify-center items-center hover:bg-gray-600"
+                      className="border-[0.5px] border-black   p-3 group rounded-full flex  justify-center items-center hover:bg-gray-600"
                     >
                       <FaX className="text-black group-hover:text-white size-3" />
                     </button>

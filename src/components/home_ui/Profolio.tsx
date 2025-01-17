@@ -18,14 +18,14 @@ const Profolio = () => {
           <div className="flex gap-2 relative">
             <button
               ref={nextButtonRef}
-              className="w-12 flex items-center justify-center h-12 swiper-button-next cursor-pointer hover:bg-black group rounded-full border-2"
+              className="w-12 flex items-center justify-center h-12 swiper-button-prev cursor-pointer hover:bg-black group rounded-full border-2"
             >
               <FaArrowLeft
                 size="20"
                 className="group-hover:text-white text-white_50 "
               />
             </button>
-            <button className="w-12 flex items-center justify-center h-12 cursor-pointer swiper-button-prev hover:bg-black group rounded-full border-2">
+            <button className="w-12 flex items-center justify-center h-12 cursor-pointer swiper-button-next hover:bg-black group rounded-full border-2">
               <FaArrowRight
                 size="20"
                 className="group-hover:text-white absolute text-white_50"

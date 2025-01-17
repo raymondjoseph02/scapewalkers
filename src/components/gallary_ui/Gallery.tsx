@@ -48,7 +48,7 @@ const Gallary: React.FC = () => {
               />
             ))
           : Portfolio.map((item: PortfolioItem) => (
-              <div key={item.id} className="break-inside-avoid">
+              <div key={item.id} className="break-inside-avoid ">
                 <GalleryCard
                   imageUrl={item.projectImage}
                   title={item.projectName}
