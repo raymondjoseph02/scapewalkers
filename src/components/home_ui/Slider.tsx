@@ -38,7 +38,7 @@ const Slider: FC<SliderProps> = ({ nextButton, prevButton }) => {
           <img
             src={p.projectImage}
             alt={p.projectName}
-            className="object-cover aspect-auto"
+            className="object-cover aspect-video"
           />
           <p className="lg:text-lg text-sm font-medium capitalize transition-all duration-500 absolute bottom-[-110%] group-hover:bottom-0 py-4 px-2 bg-black/40 text-white_100 w-full">
             {p.projectName}

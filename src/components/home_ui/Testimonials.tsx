@@ -9,7 +9,7 @@ import { Portfolio } from "../../data/Portfolio";
 const Testimonials = () => {
   const nextButtonRef = useRef<HTMLButtonElement | null>(null);
   return (
-    <section className="flex flex-col gap-10 py-5 md:py-10 bg-light_gray h-auto">
+    <section className="flex flex-col h-auto gap-10 py-5 md:py-10 bg-light_gray">
       <div className=" md:px-0 mx-auto w-[80%] relative flex flex-col items-center gap-5">
         <h3 className="text-2xl font-normal capitalize md:text-3xl ">
           what our clients say
@@ -47,7 +47,7 @@ const Testimonials = () => {
                 </div>
                 <div className="   md:absolute right-9 lg:right-0 md:w-[50%] md:h-full w-full h-[230px]">
                   <img
-                    src={Portfolio[index]?.projectImage}
+                    src={t.image ? t.image : Portfolio[index]?.projectImage}
                     alt=""
                     className="object-cover w-full h-full aspect-video "
                   />
