@@ -126,7 +126,7 @@ const Nav = () => {
                       : "text-white/80 hover:text-white/50"
                   }`}
                 >
-                  Our Profolio
+                  Our Portfolio
                 </Link>
               </li>
               <li>
