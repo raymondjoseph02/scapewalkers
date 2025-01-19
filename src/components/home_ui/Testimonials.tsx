@@ -3,11 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, A11y, Autoplay } from "swiper/modules";
 import "swiper/css/pagination";
 import "swiper/css";
-import { useRef } from "react";
 import { clientsTestimonials } from "../../data/Clients";
 import { Portfolio } from "../../data/Portfolio";
 const Testimonials = () => {
-  const nextButtonRef = useRef<HTMLButtonElement | null>(null);
   return (
     <section className="flex flex-col h-auto gap-10 py-5 md:py-10 bg-light_gray">
       <div className=" md:px-0 mx-auto w-[80%] relative flex flex-col items-center gap-5">
@@ -58,16 +56,13 @@ const Testimonials = () => {
         })}
       </Swiper>
       <div className="flex gap-2   lg:w-[80%] px-5 md:pl-[8%]  lg:mx-auto">
-        <button
-          ref={nextButtonRef}
-          className="flex items-center justify-center w-12 h-12 border-2 rounded-full cursor-pointer next-button hover:bg-black group"
-        >
+        <button className="flex items-center justify-center w-12 h-12 border-2 rounded-full cursor-pointer hover:bg-black group swiper-button-back">
           <FaArrowLeft
             size="20"
             className="group-hover:text-white text-white_50 "
           />
         </button>
-        <button className="flex items-center justify-center w-12 h-12 border-2 rounded-full cursor-pointer swiper-button-back hover:bg-black group">
+        <button className="flex items-center justify-center w-12 h-12 border-2 rounded-full cursor-pointer next-button hover:bg-black group">
           <FaArrowRight
             size="20"
             className="group-hover:text-white text-white_50"
