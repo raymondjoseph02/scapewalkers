@@ -26,7 +26,7 @@ const Testimonials = () => {
         autoplay={{
           pauseOnMouseEnter: true,
           delay: 3000,
-          reverseDirection: true,
+          reverseDirection: false,
         }}
         className=" w-full lg:w-[80%] lg:px-0 px-5"
       >

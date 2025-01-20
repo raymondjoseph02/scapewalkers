@@ -18,7 +18,7 @@ const PrimaryButton: FC<PrimaryButtonProps> = ({ dark }) => {
   return (
     <button
       onClick={handleOnClick}
-      className={`primary-button relative min-w-[129px] md:py-3 md:px-5  py-2 rounded-3xl text-sm md:text-md font-medium md:font-semibold capitalize ${
+      className={`primary-button relative min-w-[129px] md:py-3 md:px-5  py-2 rounded-3xl text-sm md:text-md font-medium md:font-semibold capitalize cursor-pointer ${
         dark ? "bg-black text-white" : "bg-white text-black"
       }`}
     >
